@@ -1,1 +1,4 @@
-# plot 1 logic
+png("plot1.png")
+hp <- read.csv("hp.txt", sep=";", header=TRUE)
+hist(hp$Global_active_power, col="red", main="Global Active Power", xlab="Global Active Power(kilowatts")
+dev.off()

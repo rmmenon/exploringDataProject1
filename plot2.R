@@ -1,0 +1,7 @@
+png("plot2.png")
+hp <- read.csv("hp.txt", sep=";", header=TRUE)
+plot(hp$Global_active_power, type="l", ylab="Global Active Power (killowatts)", xlab="", xaxt="n")
+mtext("Fri", side=1)
+mtext("Thu", side=1, adj=0)
+mtext("Sat", side=1, adj=1)
+dev.off()

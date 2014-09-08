@@ -1,3 +1,4 @@
+#source("subsetFile.R")
 png("plot1.png")
 hp <- read.csv("hp.txt", sep=";", header=TRUE)
 hist(hp$Global_active_power, col="red", main="Global Active Power", xlab="Global Active Power(kilowatts")

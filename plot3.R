@@ -1,3 +1,4 @@
+#source("subsetFile.R")
 png("plot3.png")
 hp <- read.csv("hp.txt", sep=";", header=TRUE)
 with(hp, plot(Sub_metering_1, type="n", ylab="Energy sub metering", xlab=NA,xaxt="n"))

@@ -1,3 +1,4 @@
+#source("subsetFile.R")
 png("plot2.png")
 hp <- read.csv("hp.txt", sep=";", header=TRUE)
 plot(hp$Global_active_power, type="l", ylab="Global Active Power (killowatts)", xlab="", xaxt="n")

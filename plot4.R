@@ -1,3 +1,4 @@
+#source("subsetFile.R")
 png("plot4.png")
 hp <- read.csv("hp.txt", sep=";", header=TRUE)
 par(mfrow=c(2,2))

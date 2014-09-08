@@ -1,0 +1,28 @@
+png("plot4.png")
+hp <- read.csv("hp.txt", sep=";", header=TRUE)
+par(mfrow=c(2,2))
+
+plot(hp$Global_active_power, type="l", ylab="Global Active Power", xlab="", xaxt="n")
+mtext("Fri", side=1)
+mtext("Thu", side=1, adj=0)
+mtext("Sat", side=1, adj=1)
+
+plot(hp$Voltage, type="l", ylab="Voltage", xlab="datetime", xaxt="n")
+mtext("Fri", side=1)
+mtext("Thu", side=1, adj=0)
+mtext("Sat", side=1, adj=1)
+
+with(hp, plot(Sub_metering_1, type="n", ylab="Energy sub metering", xlab=NA,xaxt="n"))
+with(hp, lines(Sub_metering_1))
+with(hp, lines(Sub_metering_2, col="red"))
+with(hp, lines(Sub_metering_3, col="blue"))
+mtext("Fri", side=1)
+mtext("Thu", side=1, adj=0)
+mtext("Sat", side=1, adj=1)
+legend("topright", lty=c(1,1,1), col=c("black", "red", "blue"), legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
+
+plot(hp$Global_reactive_power, type="l", ylab="Global_reactive_power", xlab="datetime", xaxt="n")
+mtext("Fri", side=1)
+mtext("Thu", side=1, adj=0)
+mtext("Sat", side=1, adj=1)
+dev.off()
